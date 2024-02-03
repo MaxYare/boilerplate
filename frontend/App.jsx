@@ -1,5 +1,4 @@
 import React from "react"
-import logo from "./assets/dfinity.svg"
 /*
  * Connect2ic provides essential utilities for IC app development
  */
@@ -11,42 +10,25 @@ import "@connect2ic/core/style.css"
  * Import canister definitions like this:
  */
 import * as counter from "../.dfx/local/canisters/counter"
-/*
- * Some examples to get you started
- */
-import { Counter } from "./components/Counter"
-import { Transfer } from "./components/Transfer"
-import { Profile } from "./components/Profile"
 
-function App() {
 
-  return (
-    <div className="App">
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SidebarColor from "./components/SidebarColors";
+import Tabs from "./components/Tabs";
 
-      <div className="auth-section">
-        <ConnectButton />
-      </div>
-      <ConnectDialog />
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="slogan">
-          React Template
-        </p>
-        <p className="twitter">by <a href="https://twitter.com/miamaruq">@miamaruq</a></p>
-      </header>
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <SidebarColor />
+        "Hello, world!"
+        <Tabs />
 
-      <p className="examples-title">
-        Examples
-      </p>
-      <div className="examples">
-        <Counter />
-        <Profile />
-        <Transfer />
-      </div>
 
-    </div>
-  )
+      </BrowserRouter>
+    );
+  }
 }
 
 const client = createClient({
