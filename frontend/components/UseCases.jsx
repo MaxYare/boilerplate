@@ -1,3 +1,7 @@
+import React from "react";
+import Card from "./Card";
+
+
 const useCases = [
   {
     id: 1,
@@ -36,4 +40,24 @@ const useCases = [
   }
 ];
 
-export default useCases;
+function createCard(props) {
+  return (
+    <Card
+      key={props.id}
+      video={props.video}
+      name={props.name}
+      description={props.meaning}
+      ID={props.id}
+      link={props.link}
+    />
+  );
+}
+
+function UseCasesField() {
+  return (
+    <div>
+      <dl className="dictionary">{useCases.map(createCard)}</dl>
+    </div>
+  );
+}
+export default UseCasesField;

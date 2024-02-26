@@ -21,11 +21,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <SidebarColor />
-        "Hello, world!"
+        {/* <SidebarColor />, */}
         <Tabs />
-
-
       </BrowserRouter>
     );
   }

@@ -1,7 +1,6 @@
 import React from "react";
-import FeaturesField from "./FeaturesField";
-import UseCasesField from "./UseCasesField";
-import Figma from "./Figma";
+import Features from "./Features";
+import UseCases from "./UseCases";
 import logo from "../assets/AceB logo.png";
 import { Link } from "react-router-dom";
 import FigmaPrototype from "./Figma";
@@ -10,7 +9,7 @@ function Tabs() {
   return (
     <div>
       <div>
-        <Link to="http://127.0.0.1:4943/?canisterId=bkyz2-fmaaa-aaaaa-qaaaq-cai">
+        <Link to="http://accelerate-bank.com/">
           <img className="logo-header" src={logo} alt="logo" />
         </Link>
       </div>
@@ -32,11 +31,11 @@ function Tabs() {
           App Prototype
         </button>
       </div>
-      {/* <div id="Features" className="tabcontent">
-        <FeaturesField />
-      </div> */}
+      <div id="Features" className="tabcontent">
+        <Features/>
+      </div>
       <div id="Use Cases" className="tabcontent">
-        <UseCasesField />
+        <UseCases/>
       </div>
       <div id="App" className="tabcontent">
         <FigmaPrototype />
